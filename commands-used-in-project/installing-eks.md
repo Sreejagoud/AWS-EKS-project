@@ -1,3 +1,34 @@
+Installing kubectl
+# 1. Download the latest release
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+
+# 2. Make it executable
+chmod +x kubectl
+
+# 3. Move it to your PATH
+sudo mv kubectl /usr/local/bin/
+
+# 4. Verify installation
+kubectl version --client
+
+
+🔹 Install eksctl on Linux
+
+
+# 1. Download the latest eksctl binary
+curl -sLO "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz"
+
+# 2. Extract the archive
+tar -xzf eksctl_$(uname -s)_amd64.tar.gz
+
+# 3. Move binary to /usr/local/bin (so it’s available in PATH)
+sudo mv eksctl /usr/local/bin/
+
+# 4. Verify installation
+eksctl version
+
+
+
 # Install EKS
 
 Please follow the prerequisites doc before this.
